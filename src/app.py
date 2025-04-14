@@ -2,12 +2,12 @@
 import os
 import pyodbc
 from flask import Flask
-from routes.Tienda_rutas import Tienda_rutas
-from routes import Inicio_rutas  # ✅ 
-from routes import Servicios_rutas # ✅ 
-from routes import Contactanos_rutas # ✅ 
-from routes import Login_rutas # ✅ 
-from routes.USER_PASS_RUTAS.EMPLEADOS_RUTAS.Empleados_rutas import Empleados_rutas
+from .routes.Tienda_rutas import Tienda_rutas
+from .routes import Inicio_rutas  # ✅ 
+from .routes import Servicios_rutas # ✅ 
+from .routes import Contactanos_rutas # ✅ 
+from .routes import Login_rutas # ✅ 
+from .routes.USER_PASS_RUTAS.EMPLEADOS_RUTAS.Empleados_rutas import Empleados_rutas
 # from routes.Usuarios_rutas import Usuarios_rutas  # ✅ se borro Usuarios_rutas.py
 from routes.USER_PASS_RUTAS.CLIENTES_RUTAS.Clientes_rutas import Clientes_rutas # ✅ 
 from config import SECRET_KEY
