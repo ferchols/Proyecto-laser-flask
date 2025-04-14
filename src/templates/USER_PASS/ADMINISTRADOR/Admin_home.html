@@ -1,0 +1,48 @@
+{% extends "USER_PASS/ADMINISTRADOR/Administrador_layout.html" %}
+
+{% block  content %}
+
+
+<h1>Panel de Administración</h1>
+
+<h2>Usuarios de GRUPO-LASER</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Usuario</th>
+            <th>Contraseña</th>
+            <!-- Añade más columnas según los datos -->
+        </tr>
+    </thead>
+    <tbody>
+        {% for user in usuarios %}
+        <tr>
+            <td>{{ user.USUARIO }}</td>
+            <td>{{ user.PASS }}</td>
+            <!-- Añade más datos según las columnas -->
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<h2>Clientes de SAE90EMPRE01</h2>
+<table>
+    <thead>
+        <tr>
+            <th>RFC</th>
+            <th>Código</th>
+            <!-- Añade más columnas según los datos -->
+        </tr>
+    </thead>
+    <tbody>
+        {% for client in clientes %}
+        <tr>
+            <td>{{ client.CLAVE }}</td>
+            <td>{{ client.CODIGO }}</td>
+            <!-- Añade más datos según las columnas -->
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

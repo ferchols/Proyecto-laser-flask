@@ -1,0 +1,73 @@
+/* --------------------------------------------------------------------------CONTROL DE ANCHO-----------------------------------------------------------------------------------*/
+/* Estilos generales para la tarjeta */
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Control de ancho de la tarjeta */
+.custom-width {
+    width: 100%; /* Ancho flexible */
+    max-width: 800px; /* Máximo ancho opcional */
+    margin: 0 auto; /* Centrar la tarjeta */
+}
+
+/* Estilos para la tabla */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 500px; /* Mínimo para contenido tabular */
+}
+
+.table th,
+.table td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.table th {
+    background-color: #f8f9fa;
+    white-space: nowrap; /* Evita saltos de línea */
+}
+
+/* Responsividad para la tabla */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Estilos para el encabezado de la tarjeta */
+.card h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/*5. Ejemplo de Mejora con Hover Effect*/
+
+.table tbody tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+/*4. Asegurar la responsividad*/
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%; /* Hace que la barra lateral ocupe todo el ancho en pantallas pequeñas */
+    }
+
+    .col-md-2, .col-md-10 {
+        flex: 0 0 100%; /* Hace que las columnas ocupen todo el ancho en pantallas pequeñas */
+        max-width: 100%;
+    }
+
+    .card {
+        width: 100%; /* Hace que las tarjetas ocupen todo el ancho en pantallas pequeñas */
+        margin-bottom: 20px; /* Añade espacio entre las tarjetas */
+    }
+}

@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+{% block  content %}
+<!-- Header -->
+
+    <div class="TIENDA_INICIO">
+        <img src="/static/Archivos/TIENDA_ARCHIVOS/Tienda_home_foto.jpg" alt="Expo 2024">
+        <div class="IMG-TEXT-1 animate-slideInUp">HACEMOS TUS IDEAS REALIDAD EN</div>
+        <div class="IMG-TEXT-2 animate-slideInUp">GRUPO LASER</div>
+        <div class="IMG-TEXT-3 animate-slideInUp">Tenemos el empaque perfecto para tu producto</div>
+        <button type="button" class="btn btn-light INICIO-button">VER OPCIONES</button>
+    </div>
+    <p>Envases disponibles para entrega inmediata</p>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <div class="col-md-3 sidebar p-3">
+            <h5>Productos</h5>
+            <ul class="list-unstyled">
+                <li><input type="checkbox"> 215-500 ML</li>
+                <li><input type="checkbox"> 30-200 ML</li>
+                <li><input type="checkbox"> Atomizador</li>
+                <li><input type="checkbox"> Boston</li>
+                <li><input type="checkbox"> Ciega Corta</li>
+                <li><input type="checkbox"> Cilíndrica</li>
+            </ul>
+            <h5>Disponibilidad</h5>
+            <ul class="list-unstyled">
+                <li><input type="checkbox"> En existencia</li>
+                <li><input type="checkbox"> Agotado</li>
+            </ul>
+            <h5>Precio</h5>
+            <div class="price-slider">
+                <label for="priceRange">$0 - $667</label>
+                <input type="range" id="priceRange" min="0" max="667">
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="col-md-9 p-4">
+            <div class="d-flex justify-content-between mb-3">
+                <button class="btn btn-outline-secondary">Ocultar Filtros</button>
+                <button class="btn btn-outline-secondary">Ordenar</button>
+            </div>
+
+            
+
+
+            <div id="productCards" class="row">
+                {% for producto in productos %}
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <!-- Imagen del producto -->
+                        <img src="{{ producto.imagen if producto.imagen else '/static/Archivos/default-product.jpg' }}" class="card-img-top" alt="{{ producto.nombre }}">
+                        
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">{{ producto.nombre }}</h5>
+                            <p class="card-text">Código: {{ producto.cve_art }}</p>
+                            <p class="card-text">Precio: ${{ producto.precio }}</p>
+                            <p class="card-text">Existencias: {{ producto.exist }}</p>
+                            
+                            <a href="#" class="btn btn-primary mt-auto">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

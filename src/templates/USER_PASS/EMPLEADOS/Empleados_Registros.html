@@ -1,0 +1,52 @@
+{% extends "USER_PASS/EMPLEADOS/Empleados_layout.html" %}
+{% block content %}
+
+<div class="row">
+    <div class="col-12 col-md-6">
+    <h1>Registros</h1>
+    </div>
+        <div class="card" style="width: 50%; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); border-radius: 10px; padding: 20px;">
+        <table style="width: 100%; text-align: center; border-collapse: collapse;">
+        <thead>
+            <tr>
+                <th>6h 47min</th>
+                <th>2:12</th>
+                <th>USUARI@</th>
+            </tr>
+        </thead>
+        <tbody id="schedule-table-body">
+            <!-- Las filas se generarán dinámicamente -->
+        </tbody>
+    </table>
+    </div>
+</div>
+    
+
+
+    
+<div class="card custom-width">
+    <h2>Detalles de Registros</h2>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Horas Trabajadas</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for registro in registros %}
+                <tr>
+                    <td>{{ registro[0] }}</td>
+                    <td>{{ registro[1] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+
+{% endblock %}

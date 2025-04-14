@@ -1,0 +1,182 @@
+/* --------------------------------------------------------------------------FUENTES DE LETRA-----------------------------------------------------------------------------------*/
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url("{{ url_for('static', filename='Fuentes/helvetica-neue-5/HelveticaNeueRoman.otf') }}") format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url("{{ url_for('static', filename='Fuentes/helvetica-neue-5/HelveticaNeueBold.otf') }}") format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url("{{ url_for('static', filename='Fuentes/helvetica-neue-5/HelveticaNeueItalic.ttf') }}") format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url("{{ url_for('static', filename='Fuentes/helvetica-neue-5/HelveticaNeueBoldItalic.otf') }}") format('opentype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Otras variantes opcionales */
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url("{{ url_for('static', filename='Fuentes/helvetica-neue-5/HelveticaNeueUltraLight.otf') }}") format('opentype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url("{{ url_for('static', filename='Fuentes/helvetica-neue-5/HelveticaNeueUltraLightItalic.otf') }}") format('opentype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+
+
+
+/* --------------------------------------------------------------------------BODY/Cuerpo de la pag.-----------------------------------------------------------------------------------*/
+
+
+
+
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Corrige el valor aquí */
+}
+
+
+
+
+/* ------------------------------------------------------------------------------------BARRA DE NAVEGACION-------------------------------------------------------------------------*/
+
+
+/* Tamaño del logo */
+.navbar-logo {
+    max-height: 35px; /* Controla la altura del logo */
+    align-items: center;
+        justify-content: center;
+    width: auto; /* Mantiene la proporción del logo */
+}
+
+/* Centrado de la barra de navegación */
+.navbar-container {
+    display: flex;
+    justify-content: space-between; /* Cambiado para distribuir espacio */
+    align-items: center;
+    width: 100%;
+}
+
+/* Alinear el logo y los elementos de navegación */
+.navbar-brand {
+    margin-right: 20px; /* Espacio entre el logo y los enlaces */
+}
+
+/* Centrado de los elementos de navegación */
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Alinea verticalmente */
+    flex-grow: 1; /* Permite que la nav tome todo el espacio disponible */
+}
+
+.navbar-collapse img{
+    justify-content: center; /* Centra los elementos dentro de la barra */
+}
+
+
+
+
+/* Centrado en pantallas grandes */
+@media (min-width: 992px) {
+    .navbar-collapse {
+        justify-content: center;
+    }
+}
+
+
+
+
+/* Estilo para desplegar el menú al hacer hover */
+.hover-dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+
+/* Ajustes para el menú desplegable en columnas para "Tienda" */
+.dropdown-menu-tiendas {
+    min-width: 100%; /* Ancho completo para el menú */
+    padding: 10px;
+}
+
+.dropdown-menu-tiendas .row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.dropdown-menu-tiendas .col-md-4 {
+    padding: 5px;
+}
+
+/* Estilo de fondo para el hover en las opciones del menú */
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+}
+
+
+/* Boton de CARRITO DE COMPRAS*/
+.nav-item .btn {
+    color: #333; /* Cambia el color según el diseño */
+    transition: all 0.3s ease;
+    background-color: transparent; /* Sin fondo */
+}
+
+.nav-item .btn:hover {
+    color: #007bff; /* Color al pasar el mouse */
+    background-color: rgba(0, 0, 0, 0.1); /* Fondo sutil al hacer hover */
+    transform: scale(1.1); /* Efecto de agrandamiento */
+}
+
+.nav-item .badge {
+    font-size: 14px; /* Tamaño del contador */
+    font-weight: bold;
+    padding: 4px 6px;
+    color: white;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* -------------------------------------------------------------------HOME TEXTOS ANIMACION------------------------------------------------------------------------------------------*/
+
+/* Animación de desplazamiento hacia arriba */
+@keyframes slideInUp {
+    from {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Evitar desalineación tras la animación */
+.animate-slideInUp {
+    animation: slideInUp 5s ease forwards;
+}

@@ -1,0 +1,1059 @@
+/*--------------------------------------------------------------CONTENDEDOR INCIO-----------------------------------------------------------------------*/
+
+/* Contenedor principal */
+.INICIO {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    margin: 0 auto;
+    overflow: hidden; /* Evitar desbordamiento */
+    display: flex; /* Usar flexbox */
+    flex-direction: column; /* Colocar elementos en columna */
+    align-items: center; /* Centrar horizontalmente */
+    justify-content: center; /* Centrar verticalmente */
+}
+
+/* Imagen de fondo */
+.INICIO img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantiene la proporción */
+    position: absolute; /* Asegura que la imagen ocupe el contenedor */
+    top: 0; /* Posiciona la imagen en la parte superior */
+    left: 0; /* Posiciona la imagen a la izquierda */
+    z-index: 1; /* Coloca la imagen detrás del texto */
+}
+
+/* Textos dentro del contenedor */
+.IMG-TEXT-1, .IMG-TEXT-2, .IMG-TEXT-3, .INICIO-button {
+    font-family: 'Helvetica Neue', sans-serif; /* Aplica la fuente personalizada */
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Ajuste de posición de los textos */
+.IMG-TEXT-1 {
+    margin-top: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.IMG-TEXT-2 {
+    margin-top: 0.5%;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.IMG-TEXT-3 {
+    margin-top: 0.5%;
+    font-size: 1rem;
+}
+
+.INICIO-button {
+    margin-top: 2%;
+    color: black;
+    background-color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    height: 60px;
+    width: 240px;
+    transition: background-color 0.3s ease;
+    font-family: 'Helvetica Neue';
+    font-weight: bold; /* Aplica negrita */
+}
+
+/* Efecto hover */
+.INICIO-button:hover {
+    background-color: #f0f0f0;
+}
+
+/* Media Query para pantallas medianas */
+@media screen and (max-width: 768px) {
+    .IMG-TEXT-1 {
+        font-size: 1rem;
+        top: 18%;
+    }
+
+    .IMG-TEXT-2 {
+        font-size: 1.8rem;
+        top: 28%;
+    }
+
+    .IMG-TEXT-3 {
+        font-size: 0.9rem;
+        top: 38%;
+    }
+
+    .INICIO-button {
+        font-size: 0.9rem;
+        top: 48%;
+        padding: 8px 18px;
+    }
+}
+
+/* Media Query para pantallas pequeñas */
+@media screen and (max-width: 480px) {
+    .IMG-TEXT-1 {
+        font-size: 0.8rem;
+        top: 15%;
+    }
+
+    .IMG-TEXT-2 {
+        font-size: 1.4rem;
+        top: 22%;
+    }
+
+    .IMG-TEXT-3 {
+        font-size: 0.8rem;
+        top: 30%;
+    }
+
+    .INICIO-button {
+        font-size: 0.8rem;
+        top: 40%;
+        padding: 6px 16px;
+        width: 180px;
+    }
+}
+
+/*--------------------------------------------------------------CONTENDEDOR 1-----------------------------------------------------------------------*/
+
+/* Contenedor principal */
+.Contenedor-1 {
+    position: relative;
+    width: 100%; /* Ocupa el 100% del ancho de la ventana */
+    height: 30vh; /* Ajusta la altura para ser proporcional a la ventana */
+    background-color: #F5F5F5; /* Opcional: color de fondo para resaltar el texto */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0; /* Elimina márgenes */
+    padding: 0; /* Elimina padding */
+}
+
+/* Texto 1 */
+.Texto-1-contenedor-1,
+.Texto-2-contenedor-1,
+.Texto-3-contenedor-1 {
+    margin: 0; /* Ajusta o elimina margen según sea necesario */
+}
+
+/* Texto 1 */
+.Texto-1-contenedor-1 {
+    color: #505050; /* Color gris para el texto */
+    font-size: 0.9rem !important; /* Tamaño de la fuente adaptado */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem; /* Espacio entre textos */
+}
+
+/* Texto 2 */
+.Texto-2-contenedor-1 {
+    color: #000; /* Texto negro */
+    font-size: 2.1rem !important;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Texto 3 */
+.Texto-3-contenedor-1 {
+    color: #707070; /* Un tono de gris */
+    font-size: 1.2rem !important;
+    text-align: center;
+}
+
+/* Media Queries para pantallas más grandes */
+@media screen and (min-width: 1200px) {
+    .Contenedor-1 {
+        height: 40vh; /* Más altura en pantallas grandes */
+    }
+
+    .Texto-1-contenedor-1 {
+        font-size: 2rem; /* Texto más grande en pantallas grandes */
+    }
+
+    .Texto-2-contenedor-1 {
+        font-size: 3.5rem;
+    }
+
+    .Texto-3-contenedor-1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Media Queries para pantallas pequeñas (móviles) */
+@media screen and (max-width: 768px) {
+    .Contenedor-1 {
+        height: 25vh;
+    }
+
+    .Texto-1-contenedor-1 {
+        font-size: 1.2rem;
+    }
+
+    .Texto-2-contenedor-1 {
+        font-size: 2rem;
+    }
+
+    .Texto-3-contenedor-1 {
+        font-size: 1rem;
+    }
+}
+
+/*--------------------------------------------------------------CONTENDEDOR 2-----------------------------------------------------------------------*/
+
+/* Contenedor principal */
+.Contenedor-2 {
+    position: relative;
+    width: 100%;
+    max-width: 100vw;
+    height: 60vh;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* Imagen dentro del contenedor */
+.imagen-2 {
+    height: 100%; /* Limita el alto del contenedor de la imagen */
+}
+
+.imagen-2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 30%; /* Mayor desplazamiento hacia el centro */
+    box-sizing: border-box;
+}
+
+/* Texto 1 */
+.Texto-1-contenedor-2 {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Texto 2 */
+.Texto-2-contenedor-2 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Texto 3 */
+.Texto-3-contenedor-2 {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Botón */
+.Contenedor-button-2 {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover del botón */
+.Contenedor-button-2:hover {
+    background-color: #0056b3;
+}
+
+/* Media Queries para pantallas grandes */
+@media screen and (min-width: 1200px) {
+    .Texto-1-contenedor-2 {
+        font-size: 1.8rem;
+    }
+
+    .Texto-2-contenedor-2 {
+        font-size: 2.5rem;
+    }
+
+    .Texto-3-contenedor-2 {
+        font-size: 1.3rem;
+    }
+
+    .Contenedor-button-2 {
+        font-size: 1.3rem;
+        padding: 12px 24px;
+    }
+}
+
+/* Media Queries para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .Contenedor-2 {
+        height: 50vh; /* Altura menor en pantallas pequeñas */
+    }
+
+    .Texto-1-contenedor-2 {
+        font-size: 1rem;
+    }
+
+    .Texto-2-contenedor-2 {
+        font-size: 1.5rem;
+    }
+
+    .Texto-3-contenedor-2 {
+        font-size: 1rem;
+    }
+
+    .Contenedor-button-2 {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
+/*--------------------------------------------------------------CONTENDEDOR 3-----------------------------------------------------------------------*/
+
+/* Estilo para el contenedor principal */
+.Contenedor-3 {
+    position: relative;
+    width: 100vw; /* Ocupa el 100% del ancho de la ventana */
+    max-width: 100%; /* Limita el ancho al tamaño de su contenedor padre */
+    height: auto; /* Permite que el contenedor ajuste su altura automáticamente */
+    background-color: #6234FA; /* Color de fondo */
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.Texto-1-contenedor-3 {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Flexbox para los contenedores horizontales */
+.contenedores {
+    display: flex;
+    justify-content: space-around; /* Espacio uniforme alrededor de los elementos */
+    align-items: center; /* Alinea verticalmente */
+    flex-wrap: wrap; /* Hace que los elementos se ajusten automáticamente en pantallas más pequeñas */
+    gap: 20px; /* Espaciado entre contenedores */
+    padding: 20px;
+}
+
+.contenedor {
+    width: 22%; /* Ajusta el tamaño de cada contenedor */
+    background-color: #6234FA;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+/* Ajusta las imágenes dentro de los contenedores */
+.contenedor img {
+    width: 40px;
+    height: auto; /* Mantiene la relación de aspecto de la imagen */
+    max-width: 100%; /* Limita el ancho al tamaño de su contenedor */
+    margin-bottom: 15px;
+    object-fit: contain; /* Ajusta la imagen para que no se distorsione */
+}
+
+/* Títulos y párrafos */
+.contenedor h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #32CD32; /* Verde */
+}
+
+.contenedor p {
+    font-size: 1rem;
+    color: white;
+}
+
+/* Ajuste responsivo */
+@media screen and (max-width: 768px) {
+    .contenedor {
+        width: 45%; /* Ajusta los contenedores para pantallas medianas */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contenedor {
+        width: 100%; /* Los contenedores ocupan el 100% del ancho en pantallas pequeñas */
+    }
+}
+
+/*--------------------------------------------------------------CONTENDEDOR 4-----------------------------------------------------------------------*/
+
+.Contenedor-4 {
+    width: 100%;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f3f3f3;
+}
+
+.Titulo-4 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.Filtro-boton {
+    background-color: #32CD32;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.Filtro-boton:hover {
+    background-color: #28A428;
+}
+
+/* Estilos del contenedor del carrusel */
+.carrusel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carrusel {
+    display: flex;
+    overflow-x: auto; /* Habilita el scroll horizontal */
+    width: 100%;
+    gap: 30px;
+    scroll-behavior: smooth;
+}
+
+.carrusel::-webkit-scrollbar {
+    display: none; /* Oculta la barra de scroll en WebKit (Chrome, Safari) */
+}
+
+
+.opcion {
+    min-width: 250px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    flex-shrink: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.opcion img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Estilo para el precio */
+.precio {
+    display: none;
+    font-size: 1.2rem;
+    color: #32CD32;
+    font-weight: bold;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Mostrar el precio al hacer hover en la tarjeta */
+.opcion:hover .precio {
+    display: block;
+}
+.opcion h3 {
+    font-size: 1.2rem;
+    color: #32CD32;
+}
+
+/* Estilos de los botones de navegación */
+.carrusel-btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    z-index: 1;
+    border-radius: 50%;
+}
+
+
+
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.carrusel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Responsividad */
+@media screen and (max-width: 768px) {
+    .carrusel-container {
+        padding: 0 30px; /* Añade espacio para ver los botones */
+    }
+
+    .carrusel {
+        width: 100%;
+    }
+
+    .opcion {
+        min-width: 80%; /* Ajusta el tamaño para que se vean varias opciones en pantalla pequeña */
+    }
+
+    .carrusel-btn {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .carrusel {
+        width: 100%;
+    }
+
+    .opcion {
+        min-width: 80%;
+    }
+}
+
+/*--------------------------------------------------------------CONTENDEDOR 5-----------------------------------------------------------------------*/
+
+.Contenedor-5 {
+    width: 100%;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f3f3f3;
+}
+
+.Titulo-5 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 30px;
+}
+
+.logos-grid-5 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columnas */
+    gap: 20px;
+}
+
+.logo img {
+    width: 100px; /* Ajusta el tamaño del logo */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1); /* Aumenta el tamaño cuando se pasa el cursor sobre la imagen */
+}
+
+/* Responsividad */
+@media screen and (max-width: 768px) {
+    .logos-grid-5 {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas medianas */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logos-grid-5 {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas pequeñas */
+    }
+}
+
+/*--------------------------------------------------------------CONTENDEDOR 6-----------------------------------------------------------------------*/
+
+/* Contenedor principal */
+.Contenedor-6 {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Centra los textos y botón */
+}
+
+/* Imagen del contenedor */
+/* Imagen del contenedor */
+.imagen-6 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* Textos dentro del contenedor */
+.Texto-1-contenedor-6,
+.Texto-2-contenedor-6, 
+.Texto-3-contenedor-6, 
+.Contenedor-button-6 {
+    font-family: 'Helvetica Neue', sans-serif;
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    max-width: 90%; /* Limita el ancho para justificar mejor */
+}
+
+/* Ajuste de posición de los textos */
+.Texto-1-contenedor-6 {
+    font-size: 0.8rem;
+    margin-top: 5%; /* Espacio superior para un mejor alineado */
+}
+
+.Texto-2-contenedor-6 {
+    font-size: 2rem;
+    margin-top: 2%;
+}
+
+.Texto-3-contenedor-6 {
+    font-size: 1.2rem;
+    margin-top: 2%;
+    text-align: center ; /* Justifica el texto */
+}
+
+/* Botón */
+.Contenedor-button-6 {
+    margin-top: 4%;
+    color: black;
+    background-color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    height: 60px;
+    width: 240px; /* Puedes quitar esta línea si quieres que se ajuste */
+    max-width: 100%; /* Permite que se ajuste dentro del contenedor */
+    transition: background-color 0.3s ease;
+    font-family: 'Helvetica Neue';
+    font-weight: bold;
+    display: inline-block; /* Para que respete el centrado */
+    align-self: center;
+}
+
+.Contenedor-button-6:hover {
+    background-color: #e0e0e0;
+}
+
+/* Media Queries para responsividad */
+
+/* Pantallas medianas (tabletas y móviles) */
+@media (max-width: 768px) {
+    .Contenedor-6 {
+        height: auto; /* Permitir que ajuste según contenido */
+    }
+    .Texto-1-contenedor-6 {
+        font-size: 0.8rem;
+        top: 15%; /* Aumentar el espacio superior */
+    }
+    .Texto-2-contenedor-6 {
+        font-size: 1.4rem;
+        top: 30%; /* Ajustar para crear más espacio */
+    }
+    .Texto-3-contenedor-6 {
+        font-size: 0.8rem;
+        top: 55%; /* Ajustar para crear más espacio */
+    }
+    .Contenedor-button-6 {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+        top: 80%; /* Aumentar el espacio */
+    }
+}
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+    .Contenedor-6 {
+        height: 45vh;
+    }
+    .Texto-1-contenedor-6 {
+        font-size: 1rem;
+        top: 11%; /* Ajuste para acercar al siguiente texto */
+    }
+    .Texto-2-contenedor-6 {
+        font-size: 1.4rem;
+        top: 22%; /* Ajuste para reducir separación */
+    }
+    .Texto-3-contenedor-6 {
+        font-size: 0.9rem;
+        top: 38%; /* Ajuste para acercar al botón */
+    }
+    .Contenedor-button-6 {
+        font-size: 0.8rem;
+        padding: 6px 14px;
+        top: 50%; /* Ajuste para acercar al texto anterior */
+    }
+}
+
+/* Pantallas grandes (más de 80 pulgadas) 
+@media (min-width: 1920px) {
+    .Contenedor-6 {
+        height: 80vh;
+    }
+    .Texto-1-contenedor-6 {
+        font-size: 0.8rem;
+        top: center;
+    }
+    .Texto-2-contenedor-6 {
+        font-size: 2.5rem;
+        top: 0%;
+    }
+    .Texto-3-contenedor-6 {
+        font-size: 2rem;
+        top: 0%;
+    }
+    .Contenedor-button-6 {
+        font-size: 1.5rem;
+        padding: 15px 30px;
+        top: 70%;
+    }
+}
+
+/*--------------------------------------------------------------CONTENDEDOR 7-----------------------------------------------------------------------*/
+
+.Contenedor-7 {
+    text-align: center;
+    padding: 20px;
+}
+
+.Contenedor-7 h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.Contenedor-7 hr {
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.imagen-descripcion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.imagen-descripcion .item {
+    flex: 1 1 30%; /* Flexibilidad para ajustarse */
+    margin: 20px;
+    text-align: center;
+}
+
+.imagen-descripcion .item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.imagen-descripcion .item h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.imagen-descripcion .item p {
+    font-size: 0.9rem;
+}
+
+/*--------------------------------------------------------------CONTENDEDOR 8-----------------------------------------------------------------------*/
+
+/* Estilos del contenedor de video con portada */
+.Contenedor-8 {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+/* video */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Fijo en la pantalla */
+    z-index: 1000; /* Por encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    overflow: auto; /* Permitir desplazamiento si es necesario */
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+}
+
+.modal-content {
+    position: relative;
+    margin: 15% auto; /* Margen automático para centrar */
+    padding: 20px;
+    width: 80%; /* Ancho del modal */
+    max-width: 600px; /* Máximo ancho del modal */
+}
+
+/* Botón de cerrar */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 30px; /* Ampliación del área activa */
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    border-radius: 50%;
+}
+
+.portada-video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.overlay-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.overlay-video h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.overlay-video p {
+    font-size: 1rem;
+}
+
+.btn-play {
+    font-size: 2rem;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+/* video */
+
+/* Ajuste para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    .imagen-descripcion .item {
+        flex: 1 1 90%; /* Más ancho en pantallas pequeñas */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .Contenedor-8 h2 {
+        font-size: 1.5rem; /* Tamaño de fuente más pequeño */
+    }
+    .overlay-video h3 {
+        font-size: 1.5rem; /* Tamaño de fuente más pequeño */
+    }
+    .overlay-video p {
+        font-size: 0.8rem; /* Tamaño de fuente más pequeño */
+    }
+}
+
+/*--------------------------------------------------------------CONTENDEDOR 9-----------------------------------------------------------------------*/
+
+.Contenedor-9 {
+    text-align: center;
+    padding: 40px 20px;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    max-width: 600px;
+}
+
+.Contenedor-9 h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.Contenedor-9 p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.email-input {
+    padding: 15px;
+    width: 300px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    outline: none;
+}
+
+.btn-subscribe {
+    padding: 15px 20px;
+    background-color: #7BBE40;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn-subscribe:hover {
+    background-color: #679a30;
+}
+
+/*--------------------------------------------------------------CONTENDEDOR 10-----------------------------------------------------------------------*/
+
+/* Contenedor 10: Menú */
+.Contenedor-10 {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    border-top: 1px solid #ddd;
+    text-align: left;
+}
+
+.menu-column {
+    margin: 0 10px;
+}
+
+.menu-column h4 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.menu-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-column ul li {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.menu-column p {
+    font-size: 0.9rem;
+}
+
+/*--------------------------------------------------------------CONTENDEDOR 11-----------------------------------------------------------------------*/
+
+/* Contenedor 11: Redes sociales */
+.Contenedor-11 {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+}
+
+.Contenedor-11 h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Ajuste para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .Contenedor-10 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-column {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+}
+
+
+
+
+
+

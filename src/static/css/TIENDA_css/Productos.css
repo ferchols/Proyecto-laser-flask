@@ -1,0 +1,195 @@
+
+/* Contenedor para la página del producto */
+.product-page {
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Ajusta el contenedor principal para hacerlo más estrecho en pantallas grandes */
+.container.product-page {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Contenedor para la imagen principal y galería */
+.product-container {
+    max-width: 400px; /* Ancho específico del contenedor */
+    margin: 0 auto;
+}
+
+/* Contenedor de la imagen del producto */
+.product-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+    background-color: #fff;
+    width: 100%; /* Asegura que el contenedor use el 100% del ancho permitido */
+    height: 500px; /* Ajusta la altura deseada del contenedor */
+    max-width: 400px; /* Establece el ancho máximo del elemento en 400 píxeles. Puedes ajustar este valor según tus necesidades. */
+    margin: 0 auto;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Evita que la imagen se salga del contenedor */
+}
+
+/* Ajuste de la galería de miniaturas */
+.product-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.product-gallery .img-thumbnail {
+    width: 80px;
+    height: 80px;
+    object-fit: cover; /* Ajusta cada miniatura para llenar su contenedor */
+}
+/* Contenedor de la marca y el título del producto */
+.product-brand {
+    font-size: 14px;
+    color: #888;
+    text-transform: uppercase;
+}
+
+.product-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+/* Estilo del precio */
+.product-price {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Selector de cantidad */
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 10px 0;
+}
+
+.quantity-input {
+    width: 60px;
+    text-align: center;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.quantity-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Botones de compra */
+.add-to-cart {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    /* margin-right: 10px;  Eliminado para asegurar que esté en columna */
+}
+
+.paypal-button {
+    background-color: #ffc439;
+    border: none;
+    color: #333;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+/* Justificación de texto en la sección de detalles */
+.product-details-container p,
+.product-details-container span,
+.product-details-container h1 {
+    text-align: justify;
+}
+
+/* Botones de compra en columna */
+.product-purchase.quantity-and-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.add-to-cart,
+.paypal-button {
+    width: 100%;
+}
+
+/* Más opciones de pago */
+.more-payment-options {
+    display: block;
+    margin-top: 10px;
+    color: #555;
+    text-decoration: underline;
+}
+
+/* Contenedor de detalles */
+.product-details-container {
+    max-width: 100%; /* Ajusta el ancho de la sección de detalles si es necesario */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Contenedor de detalles */
+.product-details-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Acordeón de detalles */
+.accordion-button {
+    color: #333;
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+}
+
+.accordion-button:after {
+    display: none;
+}
+
+.accordion-body {
+    color: #666;
+}
+
+/* Información de recogida */
+.pickup-info {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Redes sociales */
+.social-share {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.social-share a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+}

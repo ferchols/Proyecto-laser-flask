@@ -1,0 +1,34 @@
+/* --------------------------------------------------------------------------ESTRUCTURA PRINCIPAL-----------------------------------------------------------------------------------*/
+
+
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.dashboard .card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.card-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card-group .card {
+    flex: 1;
+}
+
+
+
+
+

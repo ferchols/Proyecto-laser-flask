@@ -1,0 +1,48 @@
+# Entorno virtual
+env/
+.env
+
+# Archivos temporales
+__pycache__/
+*.pyc
+
+# Archivos de configuración de IDE
+.vscode/
+.idea/
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de respaldo de bases de datos
+Batabase/*.bak
+
+# Entorno virtual de Python
+env/
+estructura.txt
+
+# Archivos compilados de Python
+*.pyc
+__pycache__/
+
+# Archivos generados por el sistema
+*.pyd
+*.lib
+*.whl
+
+# Archivos de configuración local
+pyvenv.cfg
+
+# Archivos de datos y caché
+*.npy
+*.npz
+*.mat
+*.csv
+*.dat
+*.jpg
+*.png
+*.svg
+*.pdf
+
+src/static/Archivos/HOME_ARCHIVOS/EXPO_2024.gif
+src/static/Archivos/HOME_ARCHIVOS/Corporativo Laser Version V.MP4

@@ -1,0 +1,101 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+<!-- Contenido principal -->
+<div class="container product-page">
+    <div class="row">
+        
+        <!-- Navegación de breadcrumb -->
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Envase PET Boston 125ml</li>
+    </ol>
+</nav>
+        <!-- Sección de imagen y galería -->
+        <div class="col-md-6 product-container">
+            <div class="product-image">
+                <img src="/static/Archivos/TIENDA_ARCHIVOS/BOSTON_125ML/Boston_125_Prin.png" alt="Envase PET Boston 125ml" class="img-fluid">
+            </div>
+            <div class="product-gallery">
+                <img src="/static/Archivos/TIENDA_ARCHIVOS/BOSTON_125ML/Boston_125_Prin.png" alt="Thumbnail 1" class="img-thumbnail">
+                <img src="/static/Archivos/TIENDA_ARCHIVOS/BOSTON_125ML/Boston_125_carru-1.jpg" alt="Thumbnail 1" class="img-thumbnail">
+                <img src="/static/Archivos/TIENDA_ARCHIVOS/BOSTON_125ML/Boston_125_carru-2.jpg" alt="Thumbnail 2" class="img-thumbnail">
+            </div>
+        </div>
+        
+        <!-- Sección de detalles del producto -->
+        <div class="col-md-6 product-details-container">
+            <span class="product-brand">GRUPO LASER</span>
+            <h1 class="product-title">Envase PET Boston 125ml</h1>
+            <p class="product-price">$663.00</p>
+
+            <div>
+              EXISTENCIAS: {{ producto.exist if producto else 'No disponible' }}
+            </div>
+            
+            <!-- Selección de cantidad -->
+            <div class="quantity-selector">
+                <button type="button" class="quantity-button" onclick="decreaseQuantity()">-</button>
+                <input type="number" class="quantity-input" id="productQuantity" value="1" min="1">
+                <button type="button" class="quantity-button" onclick="increaseQuantity()">+</button>
+            </div>
+            
+            <!-- Botones de compra -->
+            <div class="product-purchase quantity-and-buttons">
+                <button class="add-to-cart">Agregar al Carrito</button>
+                <button class="paypal-button">Pagar con PayPal</button>
+                <a href="#" class="more-payment-options">Más opciones de pago</a>
+            </div>
+
+            <!-- Detalles en acordeón -->
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      Accordion Item #1
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                      Accordion Item #2
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                      Accordion Item #3
+                    </button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                  </div>
+                </div>
+              </div>
+
+            <!-- Información de recogida -->
+            <div class="pickup-info">
+                <p>Retiro disponible en: Excursionistas Tonatiuh 19, normalmente está listo en 2 a 4 días.</p>
+            </div>
+
+            <!-- Compartir en redes sociales -->
+            <div class="social-share">
+                <a href="#">Share</a>
+                <a href="#">Tweet</a>
+                <a href="#">Pin</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados de Búsqueda</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h3 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .no-results {
+            text-align: center;
+            color: #888;
+            font-size: 18px;
+        }
+        .search-again-form {
+            text-align: center;
+            margin-top: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button[type="submit"] {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button[type="submit"]:hover {
+            background-color: #218838;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .table-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .table-wrapper {
+            flex: 1 1 45%;
+            margin: 10px;
+        }
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Formulario para buscar otro registro -->
+        <div class="search-again-form">
+            <form action="{{ url_for('buscar_registro') }}" method="GET">
+                <input type="text" name="valor_busqueda" placeholder="Ingresa otro registro..." value="{{ valor_busqueda }}" required>
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+        <h3>Resultados de búsqueda para "{{ valor_busqueda }}"</h3>
+        
+        <!-- Resultados de la búsqueda -->
+        {% if registros %}
+            <div class="table-container">
+                {% for tabla, columna, resultados in registros %}
+                    <div class="table-wrapper">
+                        <h4>Tabla: {{ tabla }}</h4>
+                        <h5>Columna: {{ columna }}</h5>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <!-- Mostrar nombres de columnas -->
+                                    <th>Registro</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for registro in resultados %}
+                                    <tr>
+                                        <td>
+                                            <!-- Resaltar el valor que coincide con la búsqueda -->
+                                            {% for campo in registro %}
+                                                <span>
+                                                    {% if valor_busqueda.lower() in campo|lower %}
+                                                        <span class="highlight">{{ campo }}</span>
+                                                    {% else %}              
+                                                        {{ campo }}
+                                                    {% endif %}
+                                                </span>
+                                            {% endfor %}
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p class="no-results">No se encontraron registros para "{{ valor_busqueda }}".</p>
+        {% endif %}
+
+        
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,201 @@
+/* --------------------------------------------------------------------------FUENTES DE LETRA-----------------------------------------------------------------------------------*/
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url("{{ url_for('static', filename='Fuentes/helvetica-neue-5/HelveticaNeueRoman.otf') }}") format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url("{{ url_for('static', filename='Fuentes/helvetica-neue-5/HelveticaNeueBold.otf') }}") format('opentype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url("{{ url_for('static', filename='Fuentes/helvetica-neue-5/HelveticaNeueItalic.ttf') }}") format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url("{{ url_for('static', filename='Fuentes/helvetica-neue-5/HelveticaNeueBoldItalic.otf') }}") format('opentype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url("{{ url_for('static', filename='Fuentes/helvetica-neue-5/HelveticaNeueUltraLight.otf') }}") format('opentype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url("{{ url_for('static', filename='Fuentes/helvetica-neue-5/HelveticaNeueUltraLightItalic.otf') }}") format('opentype');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* --------------------------------------------------------------------------BODY/Cuerpo de la página-----------------------------------------------------------------------------------*/
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #f5f7fa;
+}
+
+
+
+/* --------------------------------------------------------------------------Navegacion lateral-----------------------------------------------------------------------------------*/
+
+
+
+.sidebar {
+    width: 250px;  /* Ancho fijo */
+    background-color: #ffffff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.menu a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    transition: background 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: #e0e4e8;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    overflow-x: auto;
+}
+
+
+/* --------------------------------------------------------------------------BARRA DE NAVEGACIÓN-----------------------------------------------------------------------------------*/
+.navbar-logo {
+    max-height: 35px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar-brand {
+    margin-right: 20px;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+/* Centrado en pantallas grandes */
+@media (min-width: 992px) {
+    .navbar-collapse {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+/* --------------------------------------------------------------------------MENÚ DESPLEGABLE-----------------------------------------------------------------------------------*/
+.hover-dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+
+.dropdown-menu-tiendas {
+    min-width: 100%;
+    padding: 10px;
+}
+
+.dropdown-menu-tiendas .row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.dropdown-menu-tiendas .col-md-4 {
+    padding: 5px;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+}
+
+/* --------------------------------------------------------------------------BOTÓN CARRITO DE COMPRAS-----------------------------------------------------------------------------------*/
+.nav-item .btn {
+    color: #333;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.nav-item .btn:hover {
+    color: #007bff;
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: scale(1.1);
+}
+
+.nav-item .badge {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 4px 6px;
+    color: white;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* --------------------------------------------------------------------------HOME TEXTOS ANIMACIÓN-----------------------------------------------------------------------------------*/
+@keyframes slideInUp {
+    from {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.animate-slideInUp {
+    animation: slideInUp 1s ease forwards;
+    will-change: transform, opacity;
+}

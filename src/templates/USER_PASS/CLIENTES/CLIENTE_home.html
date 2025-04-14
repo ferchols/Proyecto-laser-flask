@@ -1,0 +1,67 @@
+{% extends "USER_PASS/CLIENTES/Clientes_layout.html" %}
+{% block content %}
+<div class="content-wrapper">
+
+<div class="container my-4"> <!-- Añade container para centrar -->
+    <div class="row">
+        <!-- Columna izquierda -->
+       
+            <!-- Botones de grupo LASER -->
+            <div class="col-md-3 text-center mb-4">
+                <h5>LASER</h5>
+                <div class="btn-group" role="group" aria-label="Grupo Laser">
+                    <button id="laser-factura-btn" type="button" class="btn btn-outline-success" {% if not session['desbloqueos']['laser_factura'] %}disabled{% endif %}>Laser Factura</button>
+                    <button id="laser-remision-btn" type="button" class="btn btn-outline-danger" {% if not session['desbloqueos']['laser_remision'] %}disabled{% endif %}>Laser Remision</button>
+                </div>
+            </div>
+
+            <!-- Botones de grupo RESAL -->
+            <div class="col-md-3 text-center mb-4">
+                <h5>RESAL</h5>
+                <div class="btn-group" role="group" aria-label="Grupo Resal">
+                    <button id="resal-factura-btn" type="button" class="btn btn-outline-success" {% if not session['desbloqueos']['resal_factura'] %}disabled{% endif %}>Resal Factura</button>
+                    <button id="resal-remision-btn" type="button" class="btn btn-outline-danger" {% if not session['desbloqueos']['resal_remision'] %}disabled{% endif %}>Resal Remision</button>
+                </div>
+            </div>
+        
+    </div>
+
+    <div id="loadingMessage" class="text-center" style="display: none;">
+        <p>Cargando productos...</p>
+    </div>
+
+    <div id="productCards" class="row g-3 justify-content-center">
+        {% for producto in productos %}
+        <div class="col-md-4 col-sm-6 mb-3">
+            <div class="card h-100 border-light shadow-sm">
+                <img src="data:image/jpeg;base64,{{ producto.FOTO }}" alt="{{ producto.DESCR }}" class="card-img-top">
+                <div class="card-body text-center">
+                    <h5 class="card-title">{{ producto.DESCR }}</h5>
+                    <p class="card-text">Precio por caja: ${{ producto.PRECIO_CAJA }}</p> <!-- Mostrar precio por caja -->
+                    <!-- Contenedor para la cantidad y el botón -->
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="quantity-container d-flex align-items-center">
+                            <button class="btn btn-outline-secondary btn-sm decrement-btn">-</button>
+                            <input type="number" class="form-control text-center quantity-input mx-2" value="1" min="1">
+                            <button class="btn btn-outline-secondary btn-sm increment-btn">+</button>
+                        </div>
+                        <a href="{{ url_for('carrito') }}" class="btn btn-primary add-to-cart-btn">Añadir al carrito</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        {% endfor %}
+        
+    </div>
+    <div id="paginationControls" class="d-flex justify-content-center mt-3">
+        <!-- Los botones de paginación se agregarán aquí dinámicamente -->
+    </div>
+</div>
+<!---------------------------------------------- Button trigger modal ------------------------------------------------------------------>
+
+
+  
+  
+
+{% endblock %}

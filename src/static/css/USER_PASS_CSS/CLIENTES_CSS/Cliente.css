@@ -1,0 +1,42 @@
+.form-select {
+    width: 80px; /* Ajusta el ancho del select */
+    padding: 2.15rem; /* Reduce el padding interno */
+    font-size: 0.9rem; /* Tamaño de fuente más pequeño */
+}
+
+.number-container {
+    width: 60px; /* Ancho del contenedor del precio */
+    font-size: 0.85rem; /* Ajusta el tamaño de la fuente del precio */
+    text-align: right; /* Alinea el precio a la derecha */
+}
+
+
+
+/* Pestaña emergenete */
+.disabled-gray {
+    background-color: #ccc !important; /* Cambia el color de fondo a gris */
+    color: #666 !important; /* Cambia el color del texto a gris oscuro */
+    border-color: #ccc !important; /* Cambia el color del borde */
+    cursor: not-allowed; /* Cambia el cursor para mostrar que está desactivado */
+    pointer-events: none; /* Evita que el botón sea interactivo */
+}
+
+/* Clase para el botón seleccionado */
+.selected-button {
+    background-color: #0056b3; /* Color de fondo para el botón seleccionado */
+    color: white; /* Color del texto del botón seleccionado */
+    border: 1px solid #0056b3;
+}
+
+/* Clase para los botones deshabilitados */
+.disabled-button {
+    opacity: 0.6; /* Hace que el botón parezca deshabilitado */
+    pointer-events: none; /* Desactiva el clic */
+    cursor: not-allowed; /* Cambia el cursor para indicar que está deshabilitado */
+}
+
+
+#myInput {
+    display: block; /* Asegura que el input esté visible */
+    visibility: visible; /* Asegura que el input sea visible */
+}

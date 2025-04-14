@@ -1,0 +1,131 @@
+{% extends "USER_PASS/EMPLEADOS/Empleados_layout.html" %}
+{% block content %}
+
+
+
+
+ <!-- Columna Central: Contenido principal -->
+<div class="col-12 col-md-10">
+    <main class="main-content">
+        <header class="header">
+            <h1>Hola {{ empleado_info['first_name'] }}  {{ empleado_info['last_name'] }}, ¡Bienvenid@!</h1>
+            <div class="user-info">
+                {% if position_info %}
+                    <span>{{ position_info['position_name'] }}</span>
+                {% else %}
+                    <span>Cargo: No disponible</span>
+                {% endif %}
+                <span>/</span>
+                <span>0h 48min</span>
+            </div>
+        </header>
+    </main>
+        <section class="content">
+            <div class="dashboard">
+                <div class="card welcome-card">
+                    <h2>Registros</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Fecha</th>
+                                <th>Horas</th>
+                                <th>12pm - 8pm</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Fecha</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        
+            <!-- Horarios y Festivos -->
+            <div class="card-group" style="display: flex; gap: 20px; justify-content: center; align-items: flex-start;">
+                <!-- Horarios -->
+    <div class="card" style="width: 50%; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); border-radius: 10px; padding: 20px;">
+    <h3 style="text-align: center;">Horarios del @USER</h3>
+    <h4 style="text-align: center;" id="schedule-month-year"></h4>
+    <table style="width: 100%; text-align: center; border-collapse: collapse;">
+        <thead>
+            <tr>
+                <th>Fecha</th>
+                <th>Horas</th>
+            </tr>
+        </thead>
+        <tbody id="schedule-table-body">
+            <!-- Las filas se generarán dinámicamente -->
+        </tbody>
+    </table>
+    </div>
+        
+                <!-- Próximos Días Festivos -->
+                <div class="card" style="width: 50%; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); border-radius: 10px; padding: 20px; margin-bottom: 20px;">
+                    <h3 style="text-align: center;">Próximos Días Festivos</h3>
+                    <ul id="festive-days" style="list-style-type: none; padding: 0; text-align: center; font-size: 16px;">
+                        <!-- Se rellena dinámicamente -->
+                    </ul>
+                </div>
+
+                        <!-- Ausencias -->
+
+                <div class="card" style="width: 50%; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); border-radius: 10px; padding: 20px;">
+                    <h3 style="text-align: center;">Faltas del @USER</h3>
+                    <h4 style="text-align: center;" id="current-month-year"></h4>
+                    <table style="width: 100%; text-align: center; border-collapse: collapse;">
+                        <thead>
+                            <tr>
+                                <th>Fecha</th>
+                                <th>Horas</th>
+                            </tr>
+                        </thead>
+                        <tbody id="absence-table-body">
+                            <!-- Las filas de la tabla se generarán aquí con JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        
+            
+
+
+    <div class="card-group" style="display: flex; gap: 20px; justify-content: center; align-items: flex-start;">
+   <!-- Equipo -->
+                <div class="card" style="width: 50%; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); border-radius: 10px; padding: 20px; margin-bottom: 20px;">
+                    <h3 style="text-align: center;">Equipo</h3>
+                    <ul id="" style="list-style-type: none; padding: 0; text-align: center; font-size: 16px;">
+                        <!-- Se rellena dinámicamente -->
+                    </ul>
+                </div>
+                <!-- Responsables -->
+                <div class="card" style="width: 50%; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); border-radius: 10px; padding: 20px; margin-bottom: 20px;">
+                    <h3 style="text-align: center;">Responsables</h3>
+                    <ul id="" style="list-style-type: none; padding: 0; text-align: center; font-size: 16px;">
+                        <!-- Se rellena dinámicamente -->
+                    </ul>
+                </div>
+                <!-- Trabajando -->
+                <div class="card" style="width: 50%; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); border-radius: 10px; padding: 20px; margin-bottom: 20px;">
+                    <h3 style="text-align: center;">Trabajando</h3>
+                    <ul id="" style="list-style-type: none; padding: 0; text-align: center; font-size: 16px;">
+                        <!-- Se rellena dinámicamente -->
+                    </ul>
+                </div>
+    </div>
+        
+        </section>
+        
+    
+
+</div>
+
+
+
+
+
+
+
+{% endblock %}

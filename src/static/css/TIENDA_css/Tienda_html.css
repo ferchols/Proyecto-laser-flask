@@ -1,0 +1,336 @@
+.content-wrapper {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos en columna */
+    /* justify-content: center;  Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    min-height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
+    padding: 20px; /* Añade espacio interno */
+    box-sizing: border-box; /* Incluye padding en el ancho total */
+}
+
+/*--------------------------------------------------------------CONTENDEDOR INCIO-----------------------------------------------------------------------*/
+/* Contenedor principal */
+.TIENDA_INICIO {
+    position: relative;
+    width: 100%;
+    height: 32vh;
+    margin: 0 auto;
+    overflow: hidden; /* Evitar desbordamiento */
+    display: flex; /* Usar flexbox */
+    flex-direction: column; /* Colocar elementos en columna */
+    align-items: center; /* Centrar horizontalmente */
+    justify-content: center; /* Centrar verticalmente */
+}
+
+/* Imagen de fondo */
+.TIENDA_INICIO img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantiene la proporción */
+    position: absolute; /* Asegura que la imagen ocupe el contenedor */
+    top: 0; /* Posiciona la imagen en la parte superior */
+    left: 0; /* Posiciona la imagen a la izquierda */
+    z-index: 1; /* Coloca la imagen detrás del texto */
+}
+
+/* Textos dentro del contenedor */
+.IMG-TEXT-1, .IMG-TEXT-2, .IMG-TEXT-3, .TIENDA_INICIO-button {
+    font-family: 'Helvetica Neue', sans-serif; /* Aplica la fuente personalizada */
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Ajuste de posición de los textos */
+.IMG-TEXT-1 {
+    margin-top: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.IMG-TEXT-2 {
+    margin-top: 0.5%;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.IMG-TEXT-3 {
+    margin-top: 0.5%;
+    font-size: 1rem;
+}
+
+.TIENDA_INICIO-button {
+    margin-top: 2%;
+    color: black;
+    background-color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    height: 60px;
+    width: 240px;
+    transition: background-color 0.3s ease;
+    font-family: 'Helvetica Neue';
+    font-weight: bold; /* Aplica negrita */
+}
+
+/* Efecto hover */
+.TIENDA_INICIO-button:hover {
+    background-color: #f0f0f0;
+}
+
+/* Media Query para pantallas medianas */
+@media screen and (max-width: 768px) {
+    .IMG-TEXT-1 {
+        font-size: 1rem;
+        top: 18%;
+    }
+
+    .IMG-TEXT-2 {
+        font-size: 1.8rem;
+        top: 28%;
+    }
+
+    .IMG-TEXT-3 {
+        font-size: 0.9rem;
+        top: 38%;
+    }
+
+    .INICIO-button {
+        font-size: 0.9rem;
+        top: 48%;
+        padding: 8px 18px;
+    }
+}
+
+/* Media Query para pantallas pequeñas */
+@media screen and (max-width: 480px) {
+    .IMG-TEXT-1 {
+        font-size: 0.8rem;
+        top: 15%;
+    }
+
+    .IMG-TEXT-2 {
+        font-size: 1.4rem;
+        top: 22%;
+    }
+
+    .IMG-TEXT-3 {
+        font-size: 0.8rem;
+        top: 30%;
+    }
+
+    .INICIO-button {
+        font-size: 0.8rem;
+        top: 40%;
+        padding: 6px 16px;
+        width: 180px;
+    }
+}
+
+
+/* CARD */
+.row {
+    justify-content: center; /* Centra las columnas dentro de la fila */
+    align-items: center; /* Centra verticalmente */
+}
+.product-image,
+.card-img-top {
+    width: 100%; /* Asegura que la imagen ocupe el ancho completo */
+    height: 200px; /* Ajusta esto al tamaño deseado */
+    object-fit: contain; /* Usa 'contain' si quieres mostrar toda la imagen */
+    border-radius: 0.5rem;
+    margin: 0; /* Evita márgenes innecesarios */
+}
+.card-img-top {
+    border-bottom: 2px solid #f8f9fa;
+}
+
+/* Estiliza el contenedor de la tarjeta */
+.card {
+    margin: 10px auto; /* Centra las tarjetas automáticamente */
+    max-width: 350px; /* Ajusta el tamaño máximo de las tarjetas */
+    width: 100%; /* Asegura que la tarjeta ocupe todo el ancho de la columna */
+    height: 450px; /* Define una altura fija para la tarjeta */
+    border: 1px solid #e0e0e0;
+    border-radius: 0.5rem;
+    overflow: hidden; /* Asegura que la imagen no se desborde */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* Efecto hover para la tarjeta */
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+#cart-count {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+
+.quantity-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.quantity-input {
+    width: 60px;
+    height: 32px;
+    text-align: center;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.cart-item .cart-quantity-input {
+    max-width: 60px; /* Limita el ancho del campo de cantidad */
+}
+
+
+.decrement-btn,
+.increment-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none; /* Quita el borde */
+    background-color: transparent; /* Opcional, si quieres eliminar el color de fondo */
+    outline: none; /* Opcional, para quitar el borde del enfoque */
+    cursor: pointer; /* Asegura que se vea como un botón clicable */
+}
+/* Eliminar las flechas para navegadores basados en Webkit (Chrome, Safari, Edge) */
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Eliminar las flechas para Firefox 
+input[type="number"] {
+    -moz-appearance: textfield;
+}*/
+
+
+
+.add-to-cart-btn {
+    margin-left: 10px;
+}
+
+
+.pagination .page-item.active .page-link {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+}
+.pagination .page-link {
+    color: #007bff;
+}
+.pagination .page-link:hover {
+    background-color: #e9ecef;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* CARRITO */
+.cart-item {
+    display: flex;
+    align-items: center; /* Asegura que todo esté alineado verticalmente */
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding: 8px 0; /* Ajusta el espaciado vertical */
+}
+
+.cart-item-img {
+    width: 70px; /* Fija el ancho */
+    height: 70px; /* Fija la altura */
+    object-fit: cover; /* Recorta la imagen si es necesario */
+    object-position: center; /* Centra la imagen dentro del contenedor */
+    border-radius: 8px; /* Opcional: Añade bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Opcional: Agrega una sombra */
+}
+/* Responsividad para Pantallas Más Pequeñas */
+@media (max-width: 768px) {
+    .cart-item-img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.cart-item div {
+    flex: 1;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.card-title {
+    font-size: 1.1rem;
+}
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.border-start {
+    border-left: 1px solid #dee2e6 !important;
+}
+.modal-body {
+    display: flex;
+    flex-direction: column; /* Asegura que los hijos se apilen verticalmente */
+}
+
+.mini-tabla-resumen {
+    align-self: flex-end; /* Posiciona la tabla hacia el lado derecho */
+    margin-top: auto; /* Empuja la tabla hacia el fondo del contenedor */
+    margin-right: 1rem; /* Opcional: espacio desde el lado derecho */
+    width: 300px; /* Ajusta el tamaño de la tabla */
+    text-align: center; /* Centra el contenido de la tabla */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FILTROS */
+
+.sidebar {
+    border-right: 1px solid #ddd;
+}
+.price-slider input[type="range"] {
+    width: 100%;
+}
