@@ -1,5 +1,5 @@
 from flask import Blueprint
-from controllers.Home import home  # Importamos la vista home
+from src.controllers.Home import home  # Importamos la vista home
 from .Tienda_rutas import Tienda_rutas
 from .Servicios_rutas import Servicios_rutas
 from .Contactanos_rutas import Contactanos_rutas
