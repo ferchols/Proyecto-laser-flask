@@ -12,7 +12,7 @@ from .routes.USER_PASS_RUTAS.EMPLEADOS_RUTAS.Empleados_rutas import Empleados_ru
 from .routes.USER_PASS_RUTAS.CLIENTES_RUTAS.Clientes_rutas import Clientes_rutas # ✅ 
 from .config import SECRET_KEY
 
-app = Flask(__name__, template_folder='templates', static_folder='static')
+app = Flask(__name__, template_folder='srcS/templates', static_folder='static')
 app.secret_key = SECRET_KEY
 
 # Registrar los Blueprints
