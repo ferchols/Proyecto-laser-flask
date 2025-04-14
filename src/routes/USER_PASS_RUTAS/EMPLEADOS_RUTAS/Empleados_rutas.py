@@ -1,5 +1,5 @@
 from flask import render_template, Blueprint
-from controllers.USER_PASS_py.EMPLEADOS_py.Empleados_Registros import obtener_registros_empleados, generar_grafica
+from src.controllers.USER_PASS_py.EMPLEADOS_py.Empleados_Registros import obtener_registros_empleados, generar_grafica
 
 Empleados_rutas = Blueprint('Empleados_rutas', __name__)
 

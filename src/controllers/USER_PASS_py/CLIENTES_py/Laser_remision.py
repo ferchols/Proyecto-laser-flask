@@ -1,6 +1,6 @@
 from flask import request, jsonify
 import base64
-from config import conn_sae80empre01 
+from src.config import conn_sae80empre01 
 
 
 # --------------------------------------------------------------BOTON LASER REMISION-----------------------------------------------------

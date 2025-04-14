@@ -1,6 +1,6 @@
 from flask import request, jsonify
 import base64
-from config import conn_sae80empre02 
+from src.config import conn_sae80empre02 
 
 # --------------------------------------------------------------BOTON RESAL REMISION-----------------------------------------------------
 

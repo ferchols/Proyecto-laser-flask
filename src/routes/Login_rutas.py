@@ -1,8 +1,8 @@
 from flask import Blueprint, render_template, request, redirect, url_for, session, flash
 import base64
-from config import conn_users, conn_clients, conn_sae80empre01, conn_sae90empre02, conn_sae80empre02, conn_admins
-from controllers.USER_PASS_py.usuarios_controller import login, logout, rutas_empleados, rutas_clientes, rutas_administradores
-from routes.USER_PASS_RUTAS.CLIENTES_RUTAS.Clientes_rutas import laser_factura, laser_remision, resal_factura, resal_remision
+from src.config import conn_users, conn_clients, conn_sae80empre01, conn_sae90empre02, conn_sae80empre02, conn_admins
+from src.controllers.USER_PASS_py.usuarios_controller import login, logout, rutas_empleados, rutas_clientes, rutas_administradores
+from src.routes.USER_PASS_RUTAS.CLIENTES_RUTAS.Clientes_rutas import laser_factura, laser_remision, resal_factura, resal_remision
 
 
 

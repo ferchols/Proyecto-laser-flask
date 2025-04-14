@@ -1,6 +1,6 @@
 from flask import request, jsonify
 import base64
-from config import conn_sae90empre01 
+from src.config import conn_sae90empre01 
 
 # --------------------------------------------------------------BOTON LASER FACTURA-----------------------------------------------------
 def Cliente_cards_laser_factura():

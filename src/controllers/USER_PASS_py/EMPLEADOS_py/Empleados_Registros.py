@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import io
 import base64
-from config import connect_db  # Importar la función de conexión desde config.py
+from src.config import connect_db  # Importar la función de conexión desde config.py
 
 def obtener_registros_empleados():
     """

@@ -1,10 +1,10 @@
 from flask import Blueprint, render_template, request, redirect, url_for, session, flash
 import base64
-from config import conn_users, conn_clients, conn_sae80empre01, conn_sae90empre02, conn_sae80empre02
-from controllers.USER_PASS_py.CLIENTES_py.Laser_factura import Cliente_cards_laser_factura
-from controllers.USER_PASS_py.CLIENTES_py.Resal_factura import Cliente_cards_resal_factura
-from controllers.USER_PASS_py.CLIENTES_py.Laser_remision import Cliente_cards_laser_remision
-from controllers.USER_PASS_py.CLIENTES_py.Resal_remision import Cliente_cards_resal_remision
+from src.config import conn_users, conn_clients, conn_sae80empre01, conn_sae90empre02, conn_sae80empre02
+from src.controllers.USER_PASS_py.CLIENTES_py.Laser_factura import Cliente_cards_laser_factura
+from src.controllers.USER_PASS_py.CLIENTES_py.Resal_factura import Cliente_cards_resal_factura
+from src.controllers.USER_PASS_py.CLIENTES_py.Laser_remision import Cliente_cards_laser_remision
+from src.controllers.USER_PASS_py.CLIENTES_py.Resal_remision import Cliente_cards_resal_remision
 
 
 

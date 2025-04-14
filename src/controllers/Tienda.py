@@ -1,5 +1,5 @@
 # controllers/store.py
-from config import conn_sae90empre01  # Usamos la conexión ya definida en config.py
+from src.config import conn_sae90empre01  # Usamos la conexión ya definida en config.py
 
 
 

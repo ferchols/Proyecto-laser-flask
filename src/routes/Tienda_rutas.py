@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, session, request, jsonify
-from controllers.Tienda import get_all_products, get_product_details
+from src.controllers.Tienda import get_all_products, get_product_details
 
 # Crear un Blueprint para las rutas de la tienda
 Tienda_rutas = Blueprint('Tienda_rutas', __name__, url_prefix='/tienda')

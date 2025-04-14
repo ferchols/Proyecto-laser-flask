@@ -1,7 +1,7 @@
 
 from flask import request, session, flash, url_for, redirect, render_template
 import base64
-from config import conn_users, conn_clients, conn_sae80empre01, conn_sae90empre02, conn_sae80empre02, conn_admins
+from src.config import conn_users, conn_clients, conn_sae80empre01, conn_sae90empre02, conn_sae80empre02, conn_admins
 
 
 #1. Convertir el objeto Row a un diccionario
